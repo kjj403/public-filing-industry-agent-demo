@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Public Filing Industry Agent</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <p class="eyebrow">EXPLAINABLE DOCUMENT AI · PUBLIC DEMO</p>
+    <h1>공시 문장에서 사업 활동과 산업코드 후보를 찾습니다.</h1>
+    <p>모델의 결론만 보여주지 않고, 근거 문장과 매칭 표현을 사람이 직접 확인하도록 설계했습니다.</p>
+  </header>
+  <main>
+    <section class="panel input-panel">
+      <div class="section-title"><span>01</span><h2>문서 입력</h2></div>
+      <div class="fields">
+        <label>기업명<input id="companyName"></label>
+        <label>문서 ID<input id="companyId"></label>
+      </div>
+      <label>사업 내용<textarea id="text" rows="7"></textarea></label>
+      <button id="analyze">사업 활동 분석</button>
+    </section>
+    <section class="panel">
+      <div class="section-title"><span>02</span><h2>후보와 근거 검토</h2></div>
+      <div id="summary" class="summary">문서를 분석하면 활동별 후보가 표시됩니다.</div>
+      <div id="activities"></div>
+      <button id="export" class="secondary" disabled>검토 결과 JSON 내려받기</button>
+    </section>
+  </main>
+  <footer>합성 데이터만 사용하는 포트폴리오용 독립 데모입니다.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
+
